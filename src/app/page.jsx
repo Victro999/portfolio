@@ -1,23 +1,34 @@
-"use client"
-import Image from "next/image";
+"use client";
 import Name from "./_components/Name";
 import LocomotiveScroll from "locomotive-scroll";
-import { useEffect } from "react";
-import { GFS_Didot } from 'next/font/google'
- 
-export const doto = GFS_Didot({
-  subsets: ['greek'],
-  weight: '400',
-})
+import { useEffect, useState } from "react";
+import { Viga } from "next/font/google";
+import About from "./_components/About";
+import Projects from "./_components/Projects";
+
+export const viga = Viga({
+    subsets: ["latin"],
+    weight: "400",
+});
 
 export default function Home() {
-  useEffect(() => {
-    new LocomotiveScroll();
-  }, []);
+    const [progress, setProgress] = useState(0);
 
-  return (
-    <div className="p-16 h-[2000px]">
-      <Name />
-    </div>
-  );
+    useEffect(() => {
+        new LocomotiveScroll();
+        window.addEventListener("progressEvent", (e) => {
+            setProgress(e.detail.progress);
+        });
+    }, []);
+
+    return (
+        <div
+            className={`${viga.className} text-black`}
+            data-scroll
+            data-scroll-event-progress="progressEvent">
+            <Name progress={progress}/>
+            <About/>
+            <Projects/>
+        </div>
+    );
 }
