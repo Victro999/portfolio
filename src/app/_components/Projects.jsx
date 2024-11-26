@@ -1,8 +1,12 @@
 import React from 'react'
+import PagePreview from './PagePreview'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div>
+      Projects
+      <PagePreview />
+    </div>
   )
 }
 
