@@ -43,15 +43,15 @@ const Name = ({ progress }) => {
             </div>
             <div
                 className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-4 + progress * 50}deg)` }}
+                style={{ transform: `rotate(${-8 + progress * 80}deg)` }}
             />
             <div
                 className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-8 + progress * 60}deg)` }}
+                style={{ transform: `rotate(${-10 + progress * 60}deg)` }}
             />
             <div
                 className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-12 + progress * 70}deg)` }}
+                style={{ transform: `rotate(${-12 + progress * 40}deg)` }}
             />
         </div>
     );

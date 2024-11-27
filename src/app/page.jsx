@@ -33,7 +33,7 @@ export default function Home() {
       data-scroll-event-progress="progressEvent"
     >
       <Name progress={progress} />
-      <About />
+      <About progress={progress} />
       <Projects />
     </div>
   );
