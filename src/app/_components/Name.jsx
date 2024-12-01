@@ -1,57 +1,41 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import Underline from "./Underline";
+import React from "react";
 
-const Name = ({ progress }) => {
-    let name = "Victor Aubry";
-    name = name.split("");
+const Name = ({ progress, lang }) => {    
+    const content = {
+        name: "Victor Aubry",
+        profil: lang === "fr" ? "Développeur & Artiste" : "Developer & Artist",
+    }
+    
+    const name = content.name.split("");
 
     return (
         <div
             data-scroll
             data-scroll-css-progress
-            className={`flex flex-col justify-center h-screen items-center p-16 relative opacity-[calc(1-var(--progress)*1.5)]`}>
+            className={`flex flex-col justify-center h-screen items-center p-16 relative opacity-[calc(1-var(--progress))] overflow-hidden`}>
             <div className="flex">
                 {name.map((letter, index) => (
                     <h1
                         key={index}
                         data-scroll
-                        data-scroll-speed={index / 50}
+                        data-scroll-speed={(index - name.length / 2) / 50}
                         className={`text-[10vw]`}>
                         {name[index] === " " ? "\u00A0" : name[index]}
                     </h1>
                 ))}
             </div>
-            <div 
-            data-scroll
-            data-scroll-speed="0.15"
-            className="flex gap-4 text-[2vw] z-10">
-                <a
-                    href="https://www.linkedin.com/in/vic-aubry/"
-                    target="_blank"
-                    className="group relative">
-                    LinkedIn
-                    <Underline/>
-                </a>
-                <a
-                    href="https://github.com/Victro999"
-                    target="_blank"
-                      className="group relative">
-                    GitHub
-                    <Underline/>
-                </a>
-            </div>
+            <p>{content.profil}</p>
             <div
-                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-8 + progress * 80}deg)` }}
+                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.01]"
+                style={{ transform: `rotate(${-8 + progress * 50}deg)` }}
             />
             <div
-                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-10 + progress * 60}deg)` }}
+                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.01]"
+                style={{ transform: `rotate(${-10 + progress * 40}deg)` }}
             />
             <div
-                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.02]"
-                style={{ transform: `rotate(${-12 + progress * 40}deg)` }}
+                className="w-3/4 h-3/4 absolute border-2 border-black bg-black bg-opacity-[0.01]"
+                style={{ transform: `rotate(${-12 + progress * 30}deg)` }}
             />
         </div>
     );

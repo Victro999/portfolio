@@ -34,7 +34,7 @@ const PagePreview = () => {
                 ref={canvasRef}
                 width={420}
                 height={960}
-                className="w-1/4 aspect-square"
+                className="w-full aspect-square"
             />
         </div>
     );
