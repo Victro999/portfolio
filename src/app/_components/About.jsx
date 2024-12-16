@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Underline from "./Underline";
+import Games from "./Games";
 
 const About = ({ progress, lang }) => {
     const content = {
@@ -8,16 +9,16 @@ const About = ({ progress, lang }) => {
     };
 
     return (
-        <div>
+        <div className="overflow-hidden">
             <p>{content.title}</p>
             <div
                 data-scroll
                 data-scroll-css-progress
-                className={`w-full h-screen p-16`}>
+                className={`w-full p-16`}>
                 <Image
                     width="200"
                     height="200"
-                    src="/images/victor.jpg"
+                    src="/img/victor.jpg"
                     className="rounded-full"
                     style={{ transform: `rotate(${progress * 100}deg)` }}
                 />
@@ -38,6 +39,7 @@ const About = ({ progress, lang }) => {
                     </a>
                 </div>
             </div>
+            <Games progress={progress} />
         </div>
     );
 };

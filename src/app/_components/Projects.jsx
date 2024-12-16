@@ -10,8 +10,8 @@ const Projects = ({ lang }) => {
     return (
         <div>
             <p>{content.title}</p>
-            <div className={`w-full h-screen p-16`}>
-                <div className="flex flex-wrap justify-between gap-8 p-8">
+            <div className={`w-full p-16`}>
+                <div className="flex flex-wrap justify-between gap-16 p-8">
                     {projects(lang).map((project, index) => {
                         return (
                             <Project

@@ -8,7 +8,14 @@ import Footer from "./_components/Footer";
 
 export default function Home() {
     const [progress, setProgress] = useState(0);
-    const [lang, setLang] = useState("fr");
+    const [lang, setLang] = useState("en");
+    const [langIndex, setLangIndex] = useState(0);
+    const availableLangs = ["fr", "en"];
+
+    const nextLang = () => {
+        setLangIndex((langIndex + 1) % availableLangs.length);
+        setLang(availableLangs[langIndex]);
+    };
 
     useEffect(() => {
         new LocomotiveScroll();
@@ -27,9 +34,9 @@ export default function Home() {
             data-scroll
             data-scroll-event-progress="progressEvent">
             <button
-                onClick={() => setLang(lang === "fr" ? "ang" : "fr")}
+                onClick={nextLang}
                 className="z-10 text-2xl fixed font-bold p-4 right-0">
-                {lang}
+                {availableLangs[langIndex]}
             </button>
             <Name progress={progress} lang={lang} />
             <div className="w-full h-[1px] bg-gray-300" />
