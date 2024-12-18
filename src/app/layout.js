@@ -2,7 +2,7 @@ import "./globals.css";
 import { Viga } from "next/font/google";
 
 export const metadata = {
-  title: "Portfolio",
+  title: "Victor Aubry | Portfolio",
   description: "Portfolio",
 };
 

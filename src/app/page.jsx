@@ -40,11 +40,11 @@ export default function Home() {
             </button>
             <Name progress={progress} lang={lang} />
             <div className="w-full h-[1px] bg-gray-300" />
-            <About progress={progress} lang={lang} />
+            <About lang={lang} />
             <div className="w-full h-[1px] bg-gray-300" />
             <Projects progress={progress} lang={lang} />
             <div className="w-full h-[1px] bg-gray-300" />
-            <Footer />
+            <Footer progress={progress} lang={lang} />
         </div>
     );
 }
