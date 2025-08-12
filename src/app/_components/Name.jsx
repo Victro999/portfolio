@@ -11,7 +11,6 @@ const Name = ({ progress, lang }) => {
     return (
         <div
             data-scroll
-            // data-scroll-css-progress
             className={`flex flex-col justify-center h-screen items-center p-16 relative opacity-[calc(1-var(--progress))] overflow-hidden`}>
             <div className="flex">
                 {name.map((letter, index) => (

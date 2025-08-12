@@ -32,7 +32,8 @@ export default function Home() {
     return (
         <div
             data-scroll
-            data-scroll-event-progress="progressEvent">
+            data-scroll-event-progress="progressEvent"
+            className="max-w-[1920px] w-5/6 mx-auto overflow-hidden">
             <button
                 onClick={nextLang}
                 className="z-10 text-2xl fixed font-bold p-4 right-0">
@@ -44,7 +45,7 @@ export default function Home() {
             <div className="w-full h-[1px] bg-gray-300" />
             <Projects progress={progress} lang={lang} />
             <div className="w-full h-[1px] bg-gray-300" />
-            <Footer progress={progress} lang={lang} />
+            <Footer lang={lang} />
         </div>
     );
 }
