@@ -1,12 +1,12 @@
 import "./globals.css";
-import { Viga } from "next/font/google";
+import { Outfit } from "next/font/google";
 
 export const metadata = {
   title: "Victor Aubry | Portfolio",
   description: "Portfolio",
 };
 
-export const viga = Viga({
+export const font = Outfit({
   subsets: ["latin"],
   weight: "400",
 });
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${viga.className} text-black`}
+        className={`${font.className} text-black`}
       >
         {children}
       </body>

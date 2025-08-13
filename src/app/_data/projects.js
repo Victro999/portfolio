@@ -1,5 +1,6 @@
 export const projects = (lang) => [
     {
+        id: 0,
         title: lang === "fr" ? "Musée Dimensionnel" : "Dimensional Museum",
         technologies: "Unity, VR",
         description:
@@ -13,7 +14,7 @@ export const projects = (lang) => [
                     className="font-bold"
                     href="https://www.linkedin.com/in/raphael-tremblay-3d"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                     Raphaël Tremblay
                 </a>{" "}
                 {lang === "fr" ? "et " : "and "}
@@ -21,7 +22,7 @@ export const projects = (lang) => [
                     className="font-bold"
                     href="https://www.linkedin.com/in/christian-allan-reolo/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                     Christian Allan Reolo
                 </a>
             </>
@@ -29,6 +30,7 @@ export const projects = (lang) => [
         img: "img/stencil-portals.gif",
     },
     {
+        id: 1,
         title: lang === "fr" ? "L'Ode d'Octavius" : "Octavius' Ode",
         technologies: "Unity",
         description:
@@ -38,21 +40,13 @@ export const projects = (lang) => [
         img: "img/octavius.gif",
     },
     {
-        title:
-            lang === "fr" ? (
-                <>
-                    <nobr>La Lumière au</nobr> <nobr>Bout du Tunnel</nobr>
-                </>
-            ) : (
-                <>
-                    <nobr>The Light at the</nobr> <nobr>End of the Tunnel</nobr>
-                </>
-            ),
-        technologies: "Unity, Procedural Generation",
+        id: 2,
+        title: "Slow Mallow",
+        technologies: "Unity",
         description:
             lang === "fr"
-                ? "Un jeu procédural où chaque niveau est généré dynamiquement. Le joueur doit naviguer dans des tunnels sombres et résoudre des défis pour avancer."
-                : "A procedural game where each level is dynamically generated. Players navigate dark tunnels and solve challenges to progress.",
+                ? "Un platformer dans un univers de bonbons où un slime se liquéfie pour franchir des grilles et se camoufler."
+                : "A platformer in a candy world where a slime melts to pass through grates and hide.",
         references: (
             <>
                 {lang === "fr"
@@ -62,37 +56,31 @@ export const projects = (lang) => [
                     className="font-bold"
                     href="https://www.linkedin.com/in/sonika-lamont/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                     Sonika Lamont
-                </a>
-                {lang === "fr" ? " et " : " and "}
-                <a
-                    className="font-bold"
-                    href="https://www.linkedin.com/in/alexis-paquette-jeu/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Alexis Paquette
                 </a>
             </>
         ),
-        img: "img/frog.gif",
+        img: "img/slow-mallow.gif",
     },
     {
-        title: lang === "fr" ? "Descente Minière" : "Mine Dive",
-        technologies: "Adobe Animate",
+        id: 3,
+        title: lang === "fr" ? "Suspendu" : "Suspended",
+        technologies: "Unity, HDRP",
         description:
             lang === "fr"
-                ? "Une animation en 2D réalisée avec Adobe Animate, montrant le chemin rocambolesque d'un mineur dans sa mine."
-                : "A 2D animation made with Adobe Animate, showing the adventurous path of a miner in his mine.",
-        img: "img/anim.gif",
+                ? "Une exploration atmosphérique en vue de côté, inspirée de Inside et Limbo, où un personnage articulé de joints physiques traverse un monde de solitude."
+                : "An atmospheric side-view exploration game inspired by Inside and Limbo, where a character built from physical joints ventures through a world of solitude.",
+        img: "img/suspendu.gif",
     },
     {
+        id: 4,
         title: "Dynamic Portals",
         technologies: "Unity, Shader Graph",
         description:
             lang === "fr"
-                ? "Une démonstration de portails dynamiques utilisant des shaders avancés dans Unity, permettant des transitions fluides entre différents endroits."
-                : "A showcase of dynamic portals using advanced shaders in Unity, enabling seamless transitions between different places.",
+                ? "Une démonstration de portails dynamiques utilisant des shaders sur mesure, permettant des transitions fluides entre différents endroits."
+                : "A showcase of dynamic portals using custom shaders, enabling seamless transitions between different places.",
         references: (
             <>
                 {lang === "fr" ? "Disponible sur " : "Available on "}
@@ -100,7 +88,7 @@ export const projects = (lang) => [
                     className="font-bold"
                     href="https://assetstore.unity.com/packages/tools/physics/dynamic-portals-235818"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noreferrer">
                     Unity Asset Store
                 </a>
             </>
