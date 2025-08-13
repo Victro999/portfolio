@@ -2,17 +2,16 @@
 import ProjectCard from "./_components/ProjectCard";
 import { useEffect, useState } from "react";
 import { projects } from "./_data/projects";
-import { useSearchParams } from "next/navigation";
 
 export default function Home() {
     const [lang, setLang] = useState("fr");
-    const searchParams = useSearchParams();
     useEffect(() => {
+        const searchParams = new URLSearchParams(window.location.search);
         const langParam = searchParams.get("lang");
         if (langParam === "en" || langParam === "fr") {
             setLang(langParam);
         }
-    }, [searchParams]);
+    }, []);
 
     return (
         <div>
