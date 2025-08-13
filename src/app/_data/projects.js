@@ -55,7 +55,9 @@ export const projects = (lang) => [
                 : "A procedural game where each level is dynamically generated. Players navigate dark tunnels and solve challenges to progress.",
         references: (
             <>
-                {lang === "fr" ? "En collaboration avec " : "In collaboration with "}
+                {lang === "fr"
+                    ? "En collaboration avec "
+                    : "In collaboration with "}
                 <a
                     className="font-bold"
                     href="https://www.linkedin.com/in/sonika-lamont/"
