@@ -1,7 +1,7 @@
 "use client";
 import ProjectCard from "./_components/ProjectCard";
 import { useEffect, useState } from "react";
-import { projects } from "./_data/projects";
+import projects from "../../public/data/projects";
 
 export default function Home() {
     const [lang, setLang] = useState("fr");
@@ -14,7 +14,7 @@ export default function Home() {
     }, []);
 
     const [selectedProjectId, setSelectedProjectId] = useState(null);
-    const selectedProject = projects(lang).find(
+    const selectedProject = projects.find(
         (project) => project.id === selectedProjectId
     );
 
@@ -24,11 +24,9 @@ export default function Home() {
                 <p>Victor</p>
                 <p>Aubry</p>
             </div>
-                <p className="text-[1.25vw] mt-4">
-                {lang === "fr"
-                    ? "Dev & Artiste"
-                    : "Dev & Artist"}
-                </p>
+            <p className="text-[1.25vw] mt-4">
+                {lang === "fr" ? "Dev & Artiste" : "Dev & Artist"}
+            </p>
             <a
                 href="https://drive.google.com/file/d/1e4zKTneexIAW0_aCaZTl_-w_XCNpQZOM/view?usp=drive_link"
                 target="_blank"
@@ -64,18 +62,29 @@ export default function Home() {
                 <div className="text-[1.25vw] fixed top-0 left-[60vw] h-full w-[28vw] flex items-center">
                     <div>
                         <h3 className="text-[3vw] leading-none text-wrap">
-                            {selectedProject.title}
+                            {selectedProject.title
+                                ? selectedProject.title
+                                : lang === "fr"
+                                ? selectedProject.title_fr
+                                : selectedProject.title_en}
                         </h3>
                         <p className="text-[1.5vw]">
                             -{selectedProject.technologies}
                         </p>
-                        <p className="mt-[1vw] text-[1vw]">
-                            {selectedProject.description}
+                        <p className="mt-[0.5vw] text-[1vw]">
+                            {lang === "fr"
+                                ? selectedProject.description_fr
+                                : selectedProject.description_en}
                         </p>
-                        {selectedProject.references && (
-                            <p className="mt-[3vw] text-[1vw]">
-                                {selectedProject.references}
-                            </p>
+                        {selectedProject.references_fr && (
+                            <p
+                                className="mt-[2vw] text-[1vw]"
+                                dangerouslySetInnerHTML={{
+                                    __html:
+                                        lang === "fr"
+                                            ? selectedProject.references_fr
+                                            : selectedProject.references_en,
+                                }}></p>
                         )}
                     </div>
                 </div>
@@ -90,7 +99,7 @@ export default function Home() {
                 )}
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center top-0 left-0 fixed gap-[1vw] pointer-events-none">
-                {projects(lang).map((project, index) => {
+                {projects.map((project, index) => {
                     return (
                         <ProjectCard
                             key={`project-${index}`}

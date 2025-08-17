@@ -11,11 +11,7 @@ const ProjectCard = ({ project, selectedProjectId, setSelectedProjectId }) => {
                 "saturate-100 h-[18vw]" : "h-[4vw]"
             }`}
             onClick={onClick}>
-            <img
-                src={project.img}
-                alt=""
-                className="object-cover w-[18vw] h-[18vw]"
-            />
+            <video src={project.vid} poster={project.prev} autoPlay={true} loop={true} controls={false} muted={true}></video>
         </div>
     );
 };

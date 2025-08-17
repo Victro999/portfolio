@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${font.className} text-black`}
+        className={`${font.className} text-gray-900 bg-gray-50`}
       >
         {children}
       </body>
