@@ -8,7 +8,7 @@ export const metadata = {
 
 export const font = Outfit({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 export default function RootLayout({ children }) {

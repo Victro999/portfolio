@@ -19,22 +19,22 @@ export default function Home() {
     );
 
     return (
-        <div className="p-8 w-full h-screen z-10">
-            <div className="text-[4vw] line-height leading-[0.75]">
+        <div className="p-8 w-full z-10">
+            <div className="text-[12vw] sm:text-[4vw] line-height leading-[0.75]">
                 <p>Victor</p>
                 <p>Aubry</p>
             </div>
-            <p className="text-[1.25vw] mt-4">
+            <p className="text-[3.75vw] sm:text-[1.25vw] mt-4">
                 {lang === "fr" ? "Dev & Artiste" : "Dev & Artist"}
             </p>
             <a
                 href="https://drive.google.com/file/d/1e4zKTneexIAW0_aCaZTl_-w_XCNpQZOM/view?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[2vw] fixed top-8 right-8 w-[6vw] h-[6vw] flex items-center justify-center transition-all border border-black hover:border-[3vw] hover:bg-black hover:text-white">
+                className="text-[6vw] sm:text-[2vw] fixed top-8 right-8 w-[16vw] h-[16vw] sm:w-[6vw] sm:h-[6vw] flex items-center justify-center transition-all border border-black hover:border-[3vw] hover:bg-black hover:text-white">
                 <p>cv</p>
             </a>
-            <div className="text-[1.25vw] fixed bottom-8 flex">
+            <div className="text-[3.75vw] sm:text-[1.25vw] fixed bottom-8 flex">
                 <button
                     onClick={() => setLang("fr")}
                     className={`${
@@ -55,30 +55,30 @@ export default function Home() {
                 href="https://www.linkedin.com/in/vic-aubry"
                 target="_blank"
                 rel="noreferrer"
-                className="text-[1.25vw] fixed bottom-8 right-8 hover:underline">
+                className="text-[3.75vw] sm:text-[1.25vw] fixed bottom-8 right-8 hover:underline">
                 linkedin
             </a>
             {selectedProject && (
-                <div className="text-[1.25vw] fixed top-0 left-[60vw] h-full w-[28vw] flex items-center">
+                <div className="fixed top-0 left-[64vw] sm:left-[60vw] h-full w-[28vw] flex items-center">
                     <div>
-                        <h3 className="text-[3vw] leading-none text-wrap">
+                        <h3 className="text-[4vw] sm:text-[3vw] leading-none text-wrap break-words hyphens-auto">
                             {selectedProject.title
                                 ? selectedProject.title
                                 : lang === "fr"
                                 ? selectedProject.title_fr
                                 : selectedProject.title_en}
                         </h3>
-                        <p className="text-[1.5vw]">
+                        <p className="text-[2vw] sm:text-[1.5vw]">
                             -{selectedProject.technologies}
                         </p>
-                        <p className="mt-[0.5vw] text-[1vw]">
+                        <p className="mt-[0.5vw] text-[3vw] sm:text-[1vw]">
                             {lang === "fr"
                                 ? selectedProject.description_fr
                                 : selectedProject.description_en}
                         </p>
                         {selectedProject.references_fr && (
                             <p
-                                className="mt-[2vw] text-[1vw]"
+                                className="mt-[2vw] text-[3vw] sm:text-[1vw]"
                                 dangerouslySetInnerHTML={{
                                     __html:
                                         lang === "fr"
@@ -89,7 +89,7 @@ export default function Home() {
                     </div>
                 </div>
             )}
-            <div className="text-[1.25vw] fixed top-0 right-[60vw] h-full flex items-center">
+            <div className="text-[3.75vw] sm:text-[1.25vw] fixed top-0 right-[64vw] sm:right-[60vw] h-full flex items-center">
                 {selectedProject && (
                     <button
                         onClick={() => setSelectedProjectId(null)}
