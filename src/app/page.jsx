@@ -28,7 +28,7 @@ export default function Home() {
                 {lang === "fr" ? "Dev & Artiste" : "Dev & Artist"}
             </p>
             <a
-                href="https://eportfolio.etsmtl.ca/Portfolio/CV/Langue/FR"
+                href="https://drive.google.com/file/d/1e4zKTneexIAW0_aCaZTl_-w_XCNpQZOM/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="text-[6vw] sm:text-[2vw] fixed top-8 right-8 w-[16vw] h-[16vw] sm:w-[6vw] sm:h-[6vw] flex items-center justify-center transition-all border border-black hover:border-[3vw] hover:bg-black hover:text-white">
