@@ -1,24 +1,8 @@
-const ProjectCard = ({ project, selectedProjectId, setSelectedProjectId }) => {
-    const onClick = () => {
-        if (project.id == selectedProjectId) setSelectedProjectId(null);
-        else setSelectedProjectId(project.id);
-    };
-
+"use client";
+const ProjectCard = ({project}) => {
     return (
-        <div
-            className={`w-[26vw] sm:w-[18vw] border border-black transition-all saturate-0 hover:saturate-100 duration-500 flex items-center justify-center overflow-hidden pointer-events-auto ${
-                selectedProjectId == project.id
-                    ? "saturate-100 h-[26vw] sm:h-[18vw]"
-                    : "h-[12vw] sm:h-[4vw]"
-            }`}
-            onClick={onClick}>
-            <video
-                src={project.vid}
-                poster={project.prev}
-                autoPlay={true}
-                loop={true}
-                controls={false}
-                muted={true}></video>
+        <div className="w-[24rem] h-[24rem] rounded-sm border border-gray-900">
+            {project.title_fr}
         </div>
     );
 };
