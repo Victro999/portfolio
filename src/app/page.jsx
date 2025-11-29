@@ -5,7 +5,7 @@ import { useLang } from "./_stores/Stores";
 import HomePresentation from "./_components/HomePresentation";
 
 const Home = async () => {
-    const projects = await getRandomProjects(2);
+    const projects = await getRandomProjects(3);
 
     return (
         <div className="my-8">

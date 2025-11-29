@@ -1,5 +1,6 @@
 import React from "react";
 import { getAllProjects } from "../_data/projects.js";
+import ProjectCard from "../_components/ProjectCard.jsx";
 
 const Projects = async () => {
     const tags = [
@@ -24,15 +25,7 @@ const Projects = async () => {
             </div>
             <div className="flex flex-wrap gap-4">
                 {projects.map((project) => (
-                    <div className="w-64 h-64 rounded-sm border border-gray-900">
-                        {project.title_fr}
-                        <video
-                            src={project.img}
-                            className="w-full h-full object-cover rounded-sm"
-                            autoPlay
-                            loop
-                            muted></video>
-                    </div>
+                    <ProjectCard project={project} key={project.id}/>
                 ))}
             </div>
         </div>

@@ -8,7 +8,7 @@ export const metadata = {
     description: "Victor Aubry's personal portfolio website showcasing projects and skills.",
 };
 
-export const font = Outfit({
+const font = Outfit({
     subsets: ["latin"],
     weight: ["400", "700"],
 });

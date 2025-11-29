@@ -6,7 +6,7 @@ const HomePresentation = () => {
     const lang = useLang((state) => state.lang);
 
     return (
-        <div className="flex flex-col items-center w-1/2 m-auto">
+        <div className="flex flex-col items-center w-2/3 m-auto">
             <h1 className="text-8xl text-[#1ec4ab] font-bold">
                 {lang === "fr" ? "Salut!" : "Hi!"}
             </h1>
