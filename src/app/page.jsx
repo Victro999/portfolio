@@ -1,29 +1,28 @@
 import Link from "next/link";
 import ProjectCard from "./_components/ProjectCard";
-import { getProjectById, getRandomProjects } from "./_data/projects";
-import { useLang } from "./_stores/Stores";
-import HomePresentation from "./_components/HomePresentation";
+import { getRandomProjects } from "./_data/projects";
+import CTAButton from "./_components/CTAButton";
+import HomePresentation from "./_components/HomeTitle";
 
 const Home = async () => {
     const projects = await getRandomProjects(3);
 
     return (
-        <div className="my-8">
+        <div className="my-8 flex-grow">
             <HomePresentation />
-            <div className="mt-12 flex justify-center gap-4">
+            <div className="mt-24 flex justify-center gap-4">
                 {projects.map((project) => (
                     <ProjectCard
                         project={project}
-                        key={project.id}
+                        key={project.slug}
                     />
                 ))}
             </div>
             <div className="w-full flex justify-center mt-4">
-                <Link
+                <CTAButton
                     href="/projects"
-                    className="bg-[#1ec4ab] text-gray-50 py-1 px-2 rounded-sm">
-                    {"fr" === "fr" ? "Tous mes projets" : "All my projects"}
-                </Link>
+                    content={{ fr: "Tous mes projets", en: "All my projects" }}
+                />
             </div>
         </div>
     );

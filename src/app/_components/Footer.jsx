@@ -6,7 +6,7 @@ const Footer = () => {
     const lang = useLang((state) => state.lang);
 
     return (
-        <footer className="py-4 border-t border-gray-900 text-xs flex justify-between items-center">
+        <footer className="hidden md:flex py-4 border-t border-gray-900 text-xs justify-between items-center">
             <div>
                 <p>
                     {lang === "fr"

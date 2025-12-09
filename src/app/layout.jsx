@@ -16,7 +16,7 @@ const font = Outfit({
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className="text-[calc(1rem+0.5vw)]">
-            <body className={`${font.className} text-gray-700 bg-gray-50 mx-8`}>
+            <body className={`${font.className} text-gray-700 bg-gray-50 mx-8 flex flex-col min-h-screen`}>
                 <Header />
                 {children}
                 <Footer />
