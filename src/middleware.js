@@ -8,7 +8,7 @@ export function middleware(request) {
 	if (device.type != 'mobile' && request.nextUrl.pathname.startsWith('/mobile')) {
 		return NextResponse.redirect(new URL('/', request.url));
 	}
-	if (process.env.NODE_ENV === "production")
+	if (process.env.NODE_ENV === "production" && !request.nextUrl.pathname.startsWith('/under_construction'))
 	{
 		return NextResponse.redirect(new URL('/under_construction', request.url));
 	}
