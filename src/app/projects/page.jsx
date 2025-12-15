@@ -7,7 +7,7 @@ const Projects = async () => {
     const projects = await getAllProjects();
 
     return (
-        <div className="my-8 flex-grow">
+        <div className="my-8 grow">
             <Title content={{fr: "Projets", en: "Projects"}}/>
             <div className="flex flex-wrap justify-center gap-4 mt-12">
                 {projects.map((project) => (

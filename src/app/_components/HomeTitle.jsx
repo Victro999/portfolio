@@ -11,8 +11,8 @@ const HomePresentation = () => {
                 <p>Victor</p>
                 <p>Aubry</p>
             </h1>
-            <div className="text-center mt-12 text-[10rem] leading-[4rem] font-bold">
-                <p className="text-shadow-lg">Dev</p>
+            <div className="text-center mt-12 text-[10rem] leading-16 font-bold text-shadow-sm">
+                <p>Dev</p>
                 <p className="text-turquoise">&</p>
                 <p>{lang === "fr" ? "Artiste" : "Artist"}</p>
             </div>

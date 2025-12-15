@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ProjectCard from "./_components/ProjectCard";
 import { getRandomProjects } from "./_data/projects";
 import CTAButton from "./_components/CTAButton";
@@ -8,7 +7,7 @@ const Home = async () => {
     const projects = await getRandomProjects(3);
 
     return (
-        <div className="my-8 flex-grow">
+        <div className="my-8 grow">
             <HomePresentation />
             <div className="mt-24 flex justify-center gap-4">
                 {projects.map((project) => (

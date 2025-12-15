@@ -3,7 +3,7 @@ import Title from "../_components/Title";
 
 function About() {
     return (
-        <div className="flex-grow my-8">
+        <div className="grow my-8">
             <Title content={{ fr: "À propos", en: "About" }} />
             {/* <p className="text-6xl">
                 {lang === "fr" ? "Je suis Victor." : "I'm Victor."}

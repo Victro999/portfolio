@@ -6,7 +6,7 @@ const Project = async ({ params }) => {
     const project = await getProjectBySlug(params.slug);
 
     return (
-        <div className="my-8 flex-grow">
+        <div className="my-8 grow h-screen">
             <Title content={{ fr: project.title_fr, en: project.title_en }} />
         </div>
     );

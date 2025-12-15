@@ -11,12 +11,11 @@ const Header = () => {
     const currentPage = usePathname();
 
     return (
-        <header>
-            <nav
-                className="hidden md:block sticky top-0 py-4 bg-gray-50 border-b border-gray-900"
-                style={{ zIndex: "100" }}>
+        <header
+            className="hidden md:block sticky top-0 py-4 bg-gray-50 border-b border-gray-900 z-10">
+            <nav>
                 <div className="flex justify-between">
-                    <div className="flex items-center gap-[1rem]">
+                    <div className="flex items-center gap-4">
                         <Link className="text-xs" href="/">
                             Victor Aubry
                         </Link>
@@ -24,8 +23,8 @@ const Header = () => {
                             {lang == "fr" ? "Dev & Artiste" : "Dev & Artist"}
                         </p>
                     </div>
-                    <div className="flex items-center gap-[1.5rem] text-xs">
-                        <div className="flex gap-[1rem]">
+                    <div className="flex items-center gap-6 text-xs">
+                        <div className="flex gap-4">
                             <Link
                                 className={`hover:underline ${
                                     currentPage == "/projects" && "underline"

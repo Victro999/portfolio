@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
     return (
         <Link
             href={`projects/${project.slug}`}
-            className="w-1/4 aspect-square rounded-sm border border-gray-900 overflow-hidden relative">
+            className="w-1/4 aspect-square rounded-sm border border-gray-900 overflow-hidden relative shadow-xs">
             <Image
                 src={project.img ?? "https://hum7264a4z.ufs.sh/f/4HNUvK0Y2eF3JZH9MhCINUoCQHkeOj95ZGlAWaFsETnrpxwy"}
                 alt={project[`title_${lang}`]}
@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
                 height={512}
                 className="w-full"
             />
-            <div className="flex justify-between items-center gap-4 absolute w-full p-2 bg-gray-50 bg-opacity-95 bottom-0">
+            <div className="flex justify-between items-center gap-4 absolute w-full p-2 bg-gray-50/95 bottom-0">
                 <p className="text-lg overflow-hidden text-ellipsis whitespace-nowrap">
                     {project[`title_${lang}`]}
                 </p>
