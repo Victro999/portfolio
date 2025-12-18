@@ -10,13 +10,13 @@ const ProjectCard = ({ project }) => {
     return (
         <Link
             href={`projects/${project.slug}`}
-            className="w-1/4 aspect-square rounded-sm border border-gray-900 overflow-hidden relative shadow-xs">
+            className="rounded-sm w-1/3 aspect-video border border-gray-900 overflow-hidden relative shadow-xs">
             <Image
-                src={project.img ?? "https://hum7264a4z.ufs.sh/f/4HNUvK0Y2eF3JZH9MhCINUoCQHkeOj95ZGlAWaFsETnrpxwy"}
+                src={project.img ?? "https://upload.wikimedia.org/wikipedia/commons/e/e0/PlaceholderLC.png"}
                 alt={project[`title_${lang}`]}
                 width={512}
                 height={512}
-                className="w-full"
+                className="aspect-video w-full object-center object-cover"
             />
             <div className="flex justify-between items-center gap-4 absolute w-full p-2 bg-gray-50/95 bottom-0">
                 <p className="text-lg overflow-hidden text-ellipsis whitespace-nowrap">

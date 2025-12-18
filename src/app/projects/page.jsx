@@ -7,9 +7,9 @@ const Projects = async () => {
     const projects = await getAllProjects();
 
     return (
-        <div className="my-8 grow">
+        <div className="my-12 grow">
             <Title content={{fr: "Projets", en: "Projects"}}/>
-            <div className="flex flex-wrap justify-center gap-4 mt-12">
+            <div className="flex flex-wrap justify-center gap-2 mt-8">
                 {projects.map((project) => (
                     <ProjectCard project={project} key={project.slug}/>
                 ))}

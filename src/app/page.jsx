@@ -4,12 +4,12 @@ import CTAButton from "./_components/CTAButton";
 import HomePresentation from "./_components/HomeTitle";
 
 const Home = async () => {
-    const projects = await getRandomProjects(3);
+    const projects = await getRandomProjects(2);
 
     return (
-        <div className="my-8 grow">
+        <div className="my-12 grow">
             <HomePresentation />
-            <div className="mt-24 flex justify-center gap-4">
+            <div className="mt-18 flex justify-center gap-4">
                 {projects.map((project) => (
                     <ProjectCard
                         project={project}

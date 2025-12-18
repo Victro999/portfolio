@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 
 export const useLang = create()(
     persist(
-        (set, get) => ({
+        (set) => ({
             lang: "fr",
             setLang: (lang) => {
                 if (lang == "fr" || lang == "en") set({ lang: lang });

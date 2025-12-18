@@ -42,7 +42,7 @@ const Header = () => {
                         </div>
                         <div className="h-6 border-l border-gray-900"></div>
                         <button
-                            className="text-base text-end font-bold w-6"
+                            className="text-base text-end font-bold w-6 hover:cursor-pointer"
                             onClick={() =>
                                 setLang(lang === "fr" ? "en" : "fr")
                             }>

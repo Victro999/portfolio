@@ -1,5 +1,6 @@
 import { NextResponse, userAgent } from 'next/server';
 
+let isFirstVisite = true;
 export function middleware(request) {
 	const { device } = userAgent(request);
 	if (device.type === 'mobile' && !request.nextUrl.pathname.startsWith('/mobile')) {
@@ -8,8 +9,9 @@ export function middleware(request) {
 	if (device.type != 'mobile' && request.nextUrl.pathname.startsWith('/mobile')) {
 		return NextResponse.redirect(new URL('/', request.url));
 	}
-	if (process.env.NODE_ENV === "production" && !request.nextUrl.pathname.startsWith('/under_construction'))
+	if (isFirstVisite)
 	{
+		isFirstVisite = false;
 		return NextResponse.redirect(new URL('/under_construction', request.url));
 	}
 	return NextResponse.next();

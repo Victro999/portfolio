@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/f/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        port: '',
+        pathname: '/wikipedia/commons/**',
+      },
     ],
   },
 };
