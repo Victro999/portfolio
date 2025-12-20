@@ -4,7 +4,7 @@ import CTAButton from "./_components/CTAButton";
 import HomePresentation from "./_components/HomeTitle";
 
 const Home = async () => {
-    const projects = await getRandomProjects(2);
+    const projects = await getRandomProjects(2, "");
 
     return (
         <div className="my-12 grow">

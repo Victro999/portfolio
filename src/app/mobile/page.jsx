@@ -8,10 +8,10 @@ const Mobile = () => {
 
     return (
         <div>
-            <header className="py-4 flex justify-end">
+            <header className="pt-8 flex justify-end">
                 <nav>
                     <button
-                        className="text-2xl text-end font-bold"
+                        className="text-2xl text-end font-bold mt-[-20px]"
                         onClick={() => setLang(lang === "fr" ? "en" : "fr")}>
                         {lang === "fr" ? "EN" : "FR"}
                     </button>

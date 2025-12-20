@@ -10,8 +10,8 @@ const Footer = () => {
             <div>
                 <p>
                     {lang === "fr"
-                        ? "© 2025 Victor Aubry. Tous droits réservés."
-                        : "© 2025 Victor Aubry. All rights reserved."}
+                        ? "© 2025 Victor Aubry."
+                        : "© 2025 Victor Aubr."}
                 </p>
                 <p>
                     {lang === "fr" ? "Icônes par " : "Icons by "}

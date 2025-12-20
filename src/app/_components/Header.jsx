@@ -19,22 +19,22 @@ const Header = () => {
                         <Link className="text-xs" href="/">
                             Victor Aubry
                         </Link>
-                        <p className="text-base font-bold">
+                        <p className="font-bold">
                             {lang == "fr" ? "Dev & Artiste" : "Dev & Artist"}
                         </p>
                     </div>
-                    <div className="flex items-center gap-6 text-xs">
-                        <div className="flex gap-4">
+                    <div className="flex items-center gap-6">
+                        <div className="flex gap-4 text-xs">
                             <Link
                                 className={`hover:underline ${
-                                    currentPage == "/projects" && "underline"
+                                    currentPage.startsWith("/projects")  && "underline"
                                 }`}
                                 href={"/projects"}>
                                 {lang == "fr" ? "Projets" : "Projects"}
                             </Link>
                             <Link
                                 className={`hover:underline ${
-                                    currentPage == "/about" && "underline"
+                                    currentPage.startsWith("/about") && "underline"
                                 }`}
                                 href={"/about"}>
                                 {lang == "fr" ? "À propos" : "About"}
@@ -42,7 +42,7 @@ const Header = () => {
                         </div>
                         <div className="h-6 border-l border-gray-900"></div>
                         <button
-                            className="text-base text-end font-bold w-6 hover:cursor-pointer"
+                            className="text-end font-bold w-6 hover:cursor-pointer"
                             onClick={() =>
                                 setLang(lang === "fr" ? "en" : "fr")
                             }>

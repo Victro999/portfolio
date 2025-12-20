@@ -9,7 +9,7 @@ const Projects = async () => {
     return (
         <div className="my-12 grow">
             <Title content={{fr: "Projets", en: "Projects"}}/>
-            <div className="flex flex-wrap justify-center gap-2 mt-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
                 {projects.map((project) => (
                     <ProjectCard project={project} key={project.slug}/>
                 ))}
