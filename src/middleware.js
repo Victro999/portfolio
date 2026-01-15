@@ -9,14 +9,14 @@ export function middleware(request) {
 	if (device.type != 'mobile' && request.nextUrl.pathname.startsWith('/mobile')) {
 		return NextResponse.redirect(new URL('/', request.url));
 	}
-	if (isFirstVisite)
-	{
-		isFirstVisite = false;
-		return NextResponse.redirect(new URL('/under_construction', request.url));
-	}
+	// if (isFirstVisite)
+	// {
+	// 	isFirstVisite = false;
+	// 	return NextResponse.redirect(new URL('/under_construction', request.url));
+	// }
 	return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/", "/projects/:path*", "/about", "/mobile", "/under_construction"]
+  matcher: '/((?!api|_next/static|_next/image|favicon.ico).*)'
 }

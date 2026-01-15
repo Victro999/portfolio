@@ -11,23 +11,42 @@ const Project = ({ project }) => {
     console.log(images);
 
     return (
-        <div className="mt-2 m-auto">
+        <div className=" m-auto">
+            <p className="flex justify-center gap-8 m-auto font-bold text-2xl">
+                {tags}
+            </p>
             {collaborators.length > 0 && (
-                <p className="text-center text-lg">
+                <p className="text-center text-lg w-1/2 text-balance m-auto mt-4">
                     {lang === "fr"
                         ? "En collaboration avec "
                         : "In collaboration with "}
                     {collaborators.map((collab, index) => (
-                        <a
-                            key={index}
-                            href={collab.href}
-                            className="font-bold hover:underline text-turquoise">
-                            {collab.name}
-                        </a>
+                        <>
+                            {index > 0 && (
+                                <span>{lang === "fr" ? " et " : " and "}</span>
+                            )}
+                            <a
+                                key={"collaborator_" + index}
+                                href={collab.href}
+                                className="font-bold hover:underline text-turquoise text-nowrap">
+                                {collab.name}
+                            </a>
+                        </>
                     ))}
                 </p>
             )}
-            <p className="flex justify-center gap-8 m-auto text-2xl">{tags}</p>
+            {project.asset_url && (
+                <p className="text-center text-lg mt-4">
+                    {lang === "fr" ? "Disponible sur " : "Available on "}
+                    <a
+                        href={project.asset_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold hover:underline text-turquoise">
+                        Unity Asset Store
+                    </a>
+                </p>
+            )}
             <div className="w-2/3 m-auto mt-8 rounded-sm aspect-video border border-gray-900 overflow-hidden relative">
                 <Image
                     src={
@@ -39,12 +58,8 @@ const Project = ({ project }) => {
                     className="aspect-video w-full object-center object-cover"
                 />
             </div>
-            <div className="m-auto w-1/2 flex flex-col items-center mt-8">
-                <h2 className="text-4xl font-bold">Description</h2>
-                <p className="text-center text-lg mt-2">
-                    {project[`description_${lang}`]}
-                </p>
-            </div>
+            <h2 className="text-2xl font-bold mt-8 text-center">Description</h2>
+            <p className="text-center w-2/3 m-auto mt-4">{project[`description_${lang}`]}</p>
             {images[0] != null && (
                 <div className="flex justify-center gap-4 m-auto mt-8">
                     {images.map((src) => (
@@ -59,11 +74,11 @@ const Project = ({ project }) => {
                     ))}
                 </div>
             )}
-            <p className="text-center mt-12 font-bold text-2xl">
+            <h2 className="text-center mt-12 font-bold text-2xl">
                 {lang === "fr"
                     ? "Découvrez d'autres projets!"
                     : "Discover other projects!"}
-            </p>
+            </h2>
         </div>
     );
 };

@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/_components/Mermaid.tsx"  ],
   "exclude": [
     "node_modules"
   ]

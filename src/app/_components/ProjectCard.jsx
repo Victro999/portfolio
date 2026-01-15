@@ -3,14 +3,14 @@ import Image from "next/image";
 import { useLang } from "../_stores/Stores";
 import Link from "next/link";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, width }) => {
     const lang = useLang((state) => state.lang);
     const tags = JSON.parse(project.tags ?? "[]");
 
     return (
         <Link
             href={`/projects/${project.slug}`}
-            className="rounded-sm w-2/5 hover:scale-101 aspect-video border hover:shadow-xl transition-all border-gray-900 overflow-hidden relative shadow-xs">
+            className={`w-2/5 rounded-sm hover:scale-101 aspect-video border hover:shadow-xl transition-all border-gray-900 overflow-hidden relative shadow-xs`}>
             <Image
                 src={project.preview ?? "https://upload.wikimedia.org/wikipedia/commons/e/e0/PlaceholderLC.png"}
                 alt={project[`title_${lang}`]}

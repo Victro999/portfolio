@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
+    "@gsap/react": "^2.1.2",
     "@mui/material": "^6.1.8",
     "@next/bundle-analyzer": "^15.4.6",
     "@tailwindcss/postcss": "^4.1.17",
+    "gsap": "^3.14.2",
     "next": "^14.2.31",
     "promised-sqlite3": "^2.1.0",
-    "react": "^18",
+    "react": "^18.3.1",
+    "react-archer": "^4.4.0",
     "react-dom": "^18",
     "zustand": "^5.0.8"
   },

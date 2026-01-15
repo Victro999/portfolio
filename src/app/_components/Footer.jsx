@@ -8,11 +8,7 @@ const Footer = () => {
     return (
         <footer className="hidden md:flex py-4 border-t border-gray-900 text-xs justify-between items-center">
             <div>
-                <p>
-                    {lang === "fr"
-                        ? "© 2025 Victor Aubry."
-                        : "© 2025 Victor Aubr."}
-                </p>
+                <p>© {new Date().getFullYear()} Victor Aubry</p>
                 <p>
                     {lang === "fr" ? "Icônes par " : "Icons by "}
                     <a
