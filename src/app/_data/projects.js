@@ -17,6 +17,7 @@ export const getProjectBySlug = async (slug) => {
         FROM projects_with_tags pwt
         LEFT JOIN project_images pi ON pi.project_id = pwt.id
         WHERE slug = ?
+        GROUP BY pwt.id
     `, [slug]);
     return results;
 }
