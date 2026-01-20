@@ -154,6 +154,7 @@ const About = ({ images }) => {
                             src={image.src}
                             alt={image.description_en}
                             fill={true}
+                            sizes="40vw"
                             className="object-cover"
                         />
                         <p className="text-xs border border-gray-900 absolute bottom-0 left-0 bg-gray-50 p-1 m-2 rounded-sm">

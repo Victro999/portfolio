@@ -15,6 +15,7 @@ const ProjectCard = ({ project, width }) => {
                 src={project.preview ?? "https://upload.wikimedia.org/wikipedia/commons/e/e0/PlaceholderLC.png"}
                 alt={project[`title_${lang}`]}
                 fill={true}
+                sizes="40vw"
                 className="aspect-video w-full object-center object-cover"
             />
             <div className="flex justify-between items-center gap-4 absolute w-full p-2 bg-gray-50/95 bottom-0">

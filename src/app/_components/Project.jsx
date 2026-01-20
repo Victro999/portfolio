@@ -8,8 +8,6 @@ const Project = ({ project }) => {
     const collaborators = JSON.parse(project.collaborators || "[]");
     const images = JSON.parse(project.images || "[]");
 
-    console.log(images);
-
     return (
         <div className=" m-auto">
             <p className="flex justify-center gap-8 m-auto font-bold text-2xl">
@@ -21,17 +19,16 @@ const Project = ({ project }) => {
                         ? "En collaboration avec "
                         : "In collaboration with "}
                     {collaborators.map((collab, index) => (
-                        <>
+                        <span key={"collaborator_" + index}>
                             {index > 0 && (
                                 <span>{lang === "fr" ? " et " : " and "}</span>
                             )}
                             <a
-                                key={"collaborator_" + index}
                                 href={collab.href}
                                 className="font-bold hover:underline text-turquoise text-nowrap">
                                 {collab.name}
                             </a>
-                        </>
+                        </span>
                     ))}
                 </p>
             )}
@@ -53,8 +50,10 @@ const Project = ({ project }) => {
                         project.preview ??
                         "https://upload.wikimedia.org/wikipedia/commons/e/e0/PlaceholderLC.png"
                     }
-                    alt={project[`title_${lang}`]}
+                    alt={project[`title_en`]}
                     fill={true}
+                    sizes="66vw"
+                    priority={true}
                     className="aspect-video w-full object-center object-cover"
                 />
             </div>
@@ -62,12 +61,14 @@ const Project = ({ project }) => {
             <p className="text-center w-2/3 m-auto mt-4">{project[`description_${lang}`]}</p>
             {images[0] != null && (
                 <div className="flex justify-center gap-4 m-auto mt-8">
-                    {images.map((src) => (
-                        <div className="rounded-sm w-2/5 aspect-video border border-gray-900 overflow-hidden relative">
+                    {images.map((src, index) => (
+                        <div className="rounded-sm w-2/5 aspect-video border border-gray-900 overflow-hidden relative"
+                            key={project.id + "-image-" + index}>
                             <Image
                                 src={src}
-                                alt={project[`title_${lang}`]}
+                                alt={`${project[`title_${lang}`]}_image_${index}`}
                                 fill={true}
+                                sizes="40vw"
                                 className="aspect-video w-full object-center object-cover"
                             />
                         </div>
