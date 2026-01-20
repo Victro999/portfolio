@@ -10,6 +10,14 @@ export const getAllProjects = async () => {
     return results;
 }
 
+export async function getAllProjectSlugs() {
+    const db = await getDb(ENV.dbPath);
+    const rows = await db.all(`
+        SELECT slug FROM projects
+    `);
+    return rows.map((r) => r.slug);
+}
+
 export const getProjectBySlug = async (slug) => {
     const db = await getDb(ENV.dbPath);
     const results = await db.get(`
