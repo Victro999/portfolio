@@ -18,7 +18,7 @@ export async function GET(request) {
         const page = await browser.newPage();
 
         await page.goto(
-            `http://localhost:3000/resume?lang=${selectedLanguage}`,
+            `https://portfolio-victros.vercel.app/resume?lang=${selectedLanguage}`,
             { waitUntil: "networkidle0" },
         );
 

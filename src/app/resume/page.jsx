@@ -11,10 +11,6 @@ const ResumePage = () => {
             <Title content={{ en: "Resume", fr: "CV" }}></Title>
             <div className="w-full flex justify-center gap-2 p-4">
                 <DownloadBtn content={{ fr: "Télécharger", en: "Download" }} />
-                <DownloadBtn
-                    content={{ fr: "Ouvrir", en: "Open" }}
-                    open={true}
-                />
             </div>
             <Suspense fallback={<div>Loading resume details...</div>}>
                 <Resume />
