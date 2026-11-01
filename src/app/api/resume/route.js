@@ -17,18 +17,6 @@ export async function GET(request) {
     try {
         const page = await browser.newPage();
 
-        // await page.waitForFunction(
-        //     (lang) => {
-        //         return (
-        //             document
-        //                 .querySelector(".resume-export")
-        //                 ?.getAttribute("data-language") === lang
-        //         );
-        //     },
-        //     {},
-        //     selectedLanguage,
-        // );
-
         await page.goto(
             `http://localhost:3000/resume?lang=${selectedLanguage}`,
             { waitUntil: "networkidle0" },
