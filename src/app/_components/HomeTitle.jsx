@@ -9,7 +9,7 @@ const HomePresentation = () => {
     return (
         <div className="flex flex-col items-center w-2/3 m-auto">
             <div className="relative">
-                <h1 className="text-4xl leading-7 text-turquoise">
+                <h1 className="text-4xl leading-7 text-puerto-rico-600">
                     <p>Victor</p>
                     <p>Aubry</p>
                 </h1>
@@ -21,7 +21,7 @@ const HomePresentation = () => {
             </div>
             <div className="text-center mt-12 text-[10rem] leading-16 font-bold text-shadow-sm">
                 <p>Dev</p>
-                <p className="text-turquoise">&</p>
+                <p className="text-puerto-rico-600">&</p>
                 <p>{lang === "fr" ? "Artiste" : "Artist"}</p>
             </div>
         </div>

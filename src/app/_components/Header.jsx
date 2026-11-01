@@ -39,6 +39,13 @@ const Header = () => {
                                 href={"/about"}>
                                 {lang == "fr" ? "À propos" : "About"}
                             </Link>
+                            <Link
+                                className={`hover:underline ${
+                                    currentPage.startsWith("/resume") && "underline"
+                                }`}
+                                href={"/resume"}>
+                                {lang == "fr" ? "CV" : "Resume"}
+                            </Link>
                         </div>
                         <div className="h-6 border-l border-gray-900"></div>
                         <button
