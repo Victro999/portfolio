@@ -19,9 +19,9 @@ const Header = () => {
                         <Link className="text-xs" href="/">
                             Victor Aubry
                         </Link>
-                        <p className="font-bold">
+                        {/* <p className="font-bold">
                             {lang == "fr" ? "Dev & Artiste" : "Dev & Artist"}
-                        </p>
+                        </p> */}
                     </div>
                     <div className="flex items-center gap-6">
                         <div className="flex gap-4 text-xs">

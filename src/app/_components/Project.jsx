@@ -25,7 +25,7 @@ const Project = ({ project }) => {
                             )}
                             <a
                                 href={collab.href}
-                                className="font-bold hover:underline text-turquoise text-nowrap">
+                                className="font-bold hover:underline text-puerto-rico-600 text-nowrap">
                                 {collab.name}
                             </a>
                         </span>
@@ -39,7 +39,7 @@ const Project = ({ project }) => {
                         href={project.asset_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-bold hover:underline text-turquoise">
+                        className="font-bold hover:underline text-puerto-rico-600">
                         Unity Asset Store
                     </a>
                 </p>

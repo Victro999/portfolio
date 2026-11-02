@@ -9,7 +9,7 @@ const Home = async () => {
     return (
         <div className="my-12 grow">
             <HomePresentation />
-            <div className="mt-18 flex justify-center gap-4">
+            <div className="mt-12 flex justify-center gap-4">
                 {projects.map((project) => (
                     <ProjectCard
                         project={project}

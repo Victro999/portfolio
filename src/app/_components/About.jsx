@@ -56,7 +56,7 @@ const About = ({ images }) => {
                 <div className="flex justify-between z-1 relative gap-4">
                     {events.map((event, index) => (
                         <div key={index} className="w-1/8">
-                            <div className="bg-turquoise border-4 border-gray-50 w-6 h-4 rounded-full z-10 m-auto"></div>
+                            <div className="bg-puerto-rico-600 border-4 border-gray-50 w-6 h-4 rounded-full z-10 m-auto"></div>
                             <p className="mt-2 font-bold text-center">
                                 {event.date}
                             </p>
@@ -134,17 +134,7 @@ const About = ({ images }) => {
                         </Interests>
                     </div>
                 </ArcherContainer>
-                <p className="text-[0.5rem] mt-2 text-center">
-                    {lang === "fr"
-                        ? "Remarque: Mes diagrammes UML ne ressemblent pas à ça :)"
-                        : "Notice: My UML charts don't look like that :)"}
-                </p>
             </div>
-            <p className="text-center w-1/2 mt-4 m-auto">
-                {lang === "fr"
-                    ? "Je n’ai pas encore choisi de spécialité unique et cette ouverture est intentionnelle. Je reste curieux et désireux d’apprendre, même au-delà de ce qui m’est familier."
-                    : "I haven’t committed to a single specialty yet, that openness is intentional. I’m driven by curiosity and a constant desire to learn, even beyond what’s familiar."}
-            </p>
             <div className="w-5/6 m-auto flex mt-12 justify-center gap-4">
                 {images.map((image, index) => (
                     <div

@@ -10,7 +10,7 @@ const Interests = ({ children, id, targetIds }) => {
                 targetAnchor: "top",
                 sourceAnchor: "bottom",
                 style: {
-                    strokeColor: "#1ec4ab",
+                    strokeColor: "#138e7e",
                     strokeWidth: 2,
                 },
             }))}>

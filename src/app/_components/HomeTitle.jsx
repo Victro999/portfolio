@@ -19,11 +19,12 @@ const HomePresentation = () => {
                     +&ensp;{lang === "fr" ? "À propos de moi" : "More about me"}
                 </Link>
             </div>
-            <div className="text-center mt-12 text-[10rem] leading-16 font-bold text-shadow-sm">
+            {/* <div className="text-center mt-12 text-[10rem] leading-16 font-bold text-shadow-sm">
                 <p>Dev</p>
                 <p className="text-puerto-rico-600">&</p>
                 <p>{lang === "fr" ? "Artiste" : "Artist"}</p>
-            </div>
+            </div> */}
+            <div className="text-center mt-12 text-4xl font-bold">{{en: "Under construction...", fr: "En construction..."}[lang]}</div>
         </div>
     );
 };
